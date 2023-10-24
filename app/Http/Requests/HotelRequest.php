@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Support\Facades\Validator;
 
 class HotelRequest extends FormRequest
 {
@@ -31,4 +33,5 @@ class HotelRequest extends FormRequest
         ];
         return $rules;
     }
+
 }

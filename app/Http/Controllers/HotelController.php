@@ -16,8 +16,8 @@ class HotelController extends Controller
 
     public function store(HotelRequest $request)
     {
+        
         $validatedData = $request->validated();
-
         $hotel = Hotel::create($validatedData);
 
         return response()->json(['message' => 'Success', 'hotel' => $hotel], 201);
